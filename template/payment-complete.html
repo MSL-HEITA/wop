@@ -1,0 +1,78 @@
+{% extends "landingnav.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="alice-bg padding-top-70 padding-bottom-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="breadcrumb-area">
+              <h1>Payment Complete</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Payment Complete</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="breadcrumb-form">
+              <form action="#">
+                <input type="text" placeholder="Enter Keywords">
+                <button><i data-feather="search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <div class="alice-bg section-padding-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="block-wrapper">
+              <div class="payment-result">
+                <div class="icon">
+                  <i data-feather="check"></i>
+                </div>
+                <h3>You Unlocked <span>Starter</span> Package</h3>
+                <p>Thanks for your order!</p>
+                <div class="result">
+                  <span>Your payment has been processed successfully.</span>
+                </div>
+                <div class="w-100"></div>
+                <a href="invoice.html" class="view-invoice">View Invoice</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action-bg padding-top-90 padding-bottom-90">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="call-to-action-2">
+              <div class="call-to-action-content">
+                <h2>For Find Your Dream Job or Candidate</h2>
+                <p>Add resume or post a job. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+              </div>
+              <div class="call-to-action-button">
+                <a href="add-resume.html" class="button">Add Resume</a>
+                <span>Or</span>
+                <a href="post-job.html" class="button">Post A Job</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Call to Action End -->
+
+{% endblock %}

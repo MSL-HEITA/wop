@@ -1,0 +1,97 @@
+{% extends "landingnav.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="alice-bg padding-top-70 padding-bottom-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="breadcrumb-area">
+              <h1>Latest Article</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Blog List</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="breadcrumb-form">
+              <form action="search" method="GET">
+                <input type="text" placeholder="Enter Keywords">
+                <button><i data-feather="search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <div class="alice-bg section-padding-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="blog-post-wrapper">
+              {%for blog in blog_list %}
+              <article class="blog-list">
+                <div class="info">
+                  <span class="date">{{blog.date_posted.month}},  {{blog.date_posted.year}}</span>
+                  <span class="author"><a href="#"><i data-feather="user"></i>{{blog.author}}</a></span>
+                  <span class="comments"><i data-feather="message-circle"></i>42</span>
+                </div>
+                <div class="content">
+                  <h3> {{blog.title}} </h3>
+                  <p> {{blog.content|slice:":150" }} </p>
+                </div>
+                <div class="read-more">
+                  <a href="{% url 'blog_details' blog.id %}" class="button">Read More &rarr;</a>
+                </div>
+              </article>
+              {% endfor %}
+              {% if is_paginated %}
+              <div class="pagination-list text-center">
+                <nav class="navigation pagination">
+                  <div class="nav-links">
+                    {% if page_obj.has_previous %}
+                    <a class="prev page-numbers" href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-left"></i></a>
+                    {% endif %}
+                    
+                    {% if page_obj.has_next %}
+                    <a class="next page-numbers" href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-right"></i></a>
+                    {% endif %}
+                  </div>
+                </nav>                
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action-bg padding-top-90 padding-bottom-90">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="call-to-action-2">
+              <div class="call-to-action-content">
+                <h2>For Find Your Dream Job or Candidate</h2>
+                <p>Add resume or post a job. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+              </div>
+              <div class="call-to-action-button">
+                <a href="/add_resume" class="button">Add Resume</a>
+                <span>Or</span>
+                <a href="/post_job" class="button">Post A Job</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Call to Action End -->
+{% endblock content %}
+   

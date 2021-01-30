@@ -1,0 +1,170 @@
+{% extends "landingnav.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="alice-bg padding-top-70 padding-bottom-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="breadcrumb-area">
+              <h1>Checkout Page</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Checkout Page</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="breadcrumb-form">
+              <form action="#">
+                <input type="text" placeholder="Enter Keywords">
+                <button><i data-feather="search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <div class="alice-bg section-padding-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="block-wrapper">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="checkout-form">
+                    <form action="payment-complete.html">
+                      <div class="row">
+                        <label class="col-md-3 col-form-label">Select Package</label>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col">
+                              <div class="package-select">
+                                <div class="package-select-inputs">
+                                  <div class="form-group">
+                                    <input class="custom-radio" type="radio" id="radio_1" name="my-radio" value="1" checked>
+                                    <label for="radio_1">
+                                    <span class="dot"></span> <span class="package-type">Free</span> $0.00
+                                  </label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input class="custom-radio" type="radio" id="radio_2" name="my-radio" value="1">
+                                    <label for="radio_2">
+                                    <span class="dot"></span> <span class="package-type">Stater</span> $22.00
+                                  </label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input class="custom-radio" type="radio" id="radio_3" name="my-radio" value="1">
+                                    <label for="radio_3">
+                                    <span class="dot"></span> <span class="package-type">Advance</span> $44.00
+                                  </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                              <div class="payment-method">
+                                <a href="#" class="credit active"><i class="fas fa-credit-card"></i>Credit Card</a>
+                                <a href="#" class="paypal"><i class="fab fa-cc-paypal"></i>PayPal</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-9 offset-md-3">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cardholder Name">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cardholder Number">
+                              </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Expired Month">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Expired Year">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="CVV">
+                              </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                              <div class="form-group terms">
+                                <input class="custom-radio" type="checkbox" id="radio-4" name="termsandcondition">
+                                <label for="radio-4">
+                                  <span class="dot"></span> You accepts our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                              </div>
+                              <button class="button">Proceed Payment</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="payment-summery">
+                    <h4>Summary</h4>
+                    <ul>
+                      <li class="payment-list">
+                        <span class="title">Starter Plan</span> <span class="amount">$22.00</span>
+                      </li>
+                      <li class="payment-list">
+                        <span class="title">VAT (15%)</span> <span class="amount">$5.00</span>
+                      </li>
+                    </ul>
+                    <div class="total-amount">
+                      <span class="title">Final Price</span><span class="amount">$27.0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action-bg padding-top-90 padding-bottom-90">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="call-to-action-2">
+              <div class="call-to-action-content">
+                <h2>For Find Your Dream Job or Candidate</h2>
+                <p>Add resume or post a job. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+              </div>
+              <div class="call-to-action-button">
+                <a href="/add_resume" class="button">Add Resume</a>
+                <span>Or</span>
+                <a href="/post_job" class="button">Post A Job</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Call to Action End -->
+
+{% endblock content %}  
